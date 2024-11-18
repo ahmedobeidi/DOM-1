@@ -1,3 +1,4 @@
+// Exercise 1
 const image = document.getElementById("image");
 
 image.addEventListener("mouseover", handleImageOnHover1);
@@ -10,3 +11,4 @@ function handleImageOnHover1() {
 function handleImageOnHover2() {
     image.src = "images/image1.jpg";
 }
+
