@@ -1,22 +1,16 @@
 const img = document.querySelectorAll("img");
 
 img.forEach((image) => {
-    image.addEventListener("mouseover", handleMouse);
-
+    image.addEventListener("mouseover", handleMouseOver);
+    image.addEventListener("mouseout", handleMouseOut);
 })
 
+function handleMouseOver(event) {
+    const imageName = event.target.id; 
+    event.target.src = `./images/${imageName}_2.jpg`;
+}
 
-let tog = true;
-
-function handleMouse (event){
-    let imageName = event.target.id;
-
-    if (tog == true) {
-      event.target.src = "./images/" + event.target.id + "_2.jpg";
-    }
-    if (tog == false) {
-      event.target.src = "./images/" + event.target.id + ".jpg";
-    }
-
-    tog = !tog
+function handleMouseOut(event) {
+    const imageName = event.target.id; 
+    event.target.src = `./images/${imageName}.jpg`;
 }
